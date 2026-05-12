@@ -1,0 +1,177 @@
+{
+  "site": {
+    "title": "The Ark Cleaning Co.",
+    "tagline": "We Care For Your Space",
+    "description": "Professional cleaning services for homes and businesses in the local area. Reliable, affordable, and thorough.",
+    "phone": "+254 700 000 000",
+    "email": "hello@thearkcleans.com",
+    "address": "Karuri, Kiambu County, Kenya",
+    "formspreeEndpoint": "https://formspree.io/f/YOUR_FORM_ID",
+    "social": {
+      "facebook": "https://facebook.com/thearkcleans",
+      "instagram": "https://instagram.com/thearkcleans",
+      "whatsapp": "https://wa.me/254700000000"
+    }
+  },
+  "hero": {
+    "heading": "A Clean Space Is a Happy Space",
+    "subheading": "The Ark delivers spotless results every time — for your home, office, or business.",
+    "ctaText": "Get a Free Quote",
+    "ctaLink": "#contact",
+    "backgroundImage": "assets/images/hero-bg.svg"
+  },
+  "about": {
+    "heading": "About The Ark",
+    "body": "Founded with a passion for creating clean, comfortable environments, The Ark has been serving homes and businesses across Kiambu County. Our team is trained, vetted, and committed to delivering outstanding results with every visit. We use eco-friendly products that are safe for your family and pets.",
+    "highlights": [
+      "Fully insured and vetted team",
+      "Eco-friendly, pet-safe products",
+      "Satisfaction guaranteed",
+      "Flexible scheduling 7 days a week"
+    ],
+    "image": "assets/images/about-team.svg"
+  },
+  "services": [
+    {
+      "id": "residential",
+      "icon": "🏠",
+      "title": "Residential Cleaning",
+      "description": "Regular or one-off deep cleans for houses, apartments, and rental properties. We handle every room from top to bottom."
+    },
+    {
+      "id": "office",
+      "icon": "🏢",
+      "title": "Office & Commercial",
+      "description": "Keep your workspace professional and hygienic. Daily, weekly, or monthly contracts available for businesses of all sizes."
+    },
+    {
+      "id": "deep",
+      "icon": "✨",
+      "title": "Deep Cleaning",
+      "description": "A thorough top-to-bottom clean perfect for move-ins, move-outs, post-renovation, or seasonal refresh."
+    },
+    {
+      "id": "carpet",
+      "icon": "🧹",
+      "title": "Carpet & Upholstery",
+      "description": "Specialised steam cleaning and stain removal for carpets, sofas, chairs, and mattresses."
+    },
+    {
+      "id": "windows",
+      "icon": "🪟",
+      "title": "Window Cleaning",
+      "description": "Crystal-clear windows inside and out — for residential and commercial properties, including high-access windows."
+    },
+    {
+      "id": "afterparty",
+      "icon": "🎉",
+      "title": "After-Event Cleaning",
+      "description": "We tidy up after parties, weddings, corporate events, and any other gathering, so you don't have to."
+    }
+  ],
+  "packages": [
+    {
+      "name": "Basic",
+      "price": "KES 2,500",
+      "per": "visit",
+      "features": [
+        "Up to 2 bedrooms",
+        "Kitchen & bathrooms",
+        "Vacuuming & mopping",
+        "Dusting surfaces"
+      ],
+      "highlight": false
+    },
+    {
+      "name": "Standard",
+      "price": "KES 4,500",
+      "per": "visit",
+      "features": [
+        "Up to 4 bedrooms",
+        "Full kitchen deep clean",
+        "All bathrooms",
+        "Inside oven & fridge",
+        "Laundry (wash & fold)"
+      ],
+      "highlight": true
+    },
+    {
+      "name": "Premium",
+      "price": "KES 8,000",
+      "per": "visit",
+      "features": [
+        "Unlimited rooms",
+        "Full deep clean",
+        "Carpet steam cleaning",
+        "Window cleaning",
+        "Upholstery treatment",
+        "Priority scheduling"
+      ],
+      "highlight": false
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Sarah M.",
+      "location": "Kiambu Town",
+      "quote": "The Ark team transformed our home! They were punctual, thorough, and so friendly. Our house has never looked this good.",
+      "rating": 5
+    },
+    {
+      "name": "David K.",
+      "location": "Ruaka",
+      "quote": "We use The Ark for our office every week. Absolutely reliable — the team is professional and always does a fantastic job.",
+      "rating": 5
+    },
+    {
+      "name": "Grace W.",
+      "location": "Limuru",
+      "quote": "Booked the deep clean before moving in and it was worth every cent. The bathroom and kitchen were sparkling clean.",
+      "rating": 5
+    },
+    {
+      "name": "James O.",
+      "location": "Banana",
+      "quote": "After-event cleanup for our corporate dinner — done in under 2 hours and the venue looked brand new. Highly recommended!",
+      "rating": 5
+    }
+  ],
+  "gallery": [
+    {
+      "id": "g1",
+      "src": "assets/images/gallery-01.svg",
+      "alt": "Spotless kitchen after a deep clean",
+      "category": "residential"
+    },
+    {
+      "id": "g2",
+      "src": "assets/images/gallery-02.svg",
+      "alt": "Clean and bright living room",
+      "category": "residential"
+    },
+    {
+      "id": "g3",
+      "src": "assets/images/gallery-03.svg",
+      "alt": "Gleaming office reception area",
+      "category": "office"
+    },
+    {
+      "id": "g4",
+      "src": "assets/images/gallery-04.svg",
+      "alt": "Freshly cleaned bathroom tiles",
+      "category": "deep"
+    },
+    {
+      "id": "g5",
+      "src": "assets/images/gallery-05.svg",
+      "alt": "Steam-cleaned carpet — before and after",
+      "category": "carpet"
+    },
+    {
+      "id": "g6",
+      "src": "assets/images/gallery-06.svg",
+      "alt": "Crystal-clear windows after cleaning",
+      "category": "windows"
+    }
+  ]
+}

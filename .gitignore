@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+
+# Windows
+Thumbs.db
+
+# Editor directories
+.vscode/
+.idea/
+*.suo
+
+# Node (if ever adding optional build tools)
+node_modules/
+npm-debug.log
+
+# Python cache (scripts)
+__pycache__/
+*.pyc
+
+# Environment / secrets
+.env
+*.env.local

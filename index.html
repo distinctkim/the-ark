@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Ark Cleaning Co.</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Professional cleaning services for homes and businesses. Reliable, affordable, and thorough.">
+  <meta property="og:title"       content="The Ark Cleaning Co.">
+  <meta property="og:description" content="We care for your space — residential, office, and deep cleaning services.">
+  <meta property="og:type"        content="website">
+  <meta name="theme-color"        content="#1a2e4a">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon (emoji fallback) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Skip Navigation for Accessibility -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="#" class="nav-logo" aria-label="The Ark Cleaning Co. — Home">The Ark</a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact" class="btn btn-primary">Get a Quote</a></li>
+      </ul>
+
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section id="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge fade-up fade-up-1">✨ Professional Cleaning Services</div>
+          <h1 id="hero-heading" class="fade-up fade-up-2">A Clean Space Is a Happy Space</h1>
+          <p id="hero-sub" class="fade-up fade-up-3">
+            The Ark delivers spotless results every time — for your home, office, or business.
+          </p>
+          <div class="hero-cta fade-up fade-up-3">
+            <a id="hero-cta" href="#contact" class="btn btn-primary">Get a Free Quote</a>
+            <a id="hero-phone" href="tel:+254700000000" class="btn btn-outline">📞 Call Us</a>
+          </div>
+          <div class="hero-stats fade-up">
+            <div class="stat-item">
+              <div class="stat-num">500+</div>
+              <div class="stat-label">Happy clients</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">5★</div>
+              <div class="stat-label">Average rating</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">7 days</div>
+              <div class="stat-label">Available weekly</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES
+    ============================================================ -->
+    <section id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">What We Do</span>
+          <h2 id="services-heading" class="section-heading">Our Services</h2>
+          <p class="section-sub">
+            From weekly home maintenance to one-off deep cleans — we have a service to suit every need and budget.
+          </p>
+        </div>
+        <!-- Rendered dynamically from content.json by main.js -->
+        <div id="services-grid" class="services-grid" role="list" aria-label="Services list"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+    ============================================================ -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap">
+            <img id="about-img" src="assets/images/about-team.jpg"
+                 alt="The Ark cleaning team" loading="lazy"
+                 onerror="this.style.background='#eef2f7'; this.style.height='420px';">
+          </div>
+          <div class="about-text">
+            <span class="section-label">Our Story</span>
+            <h2 id="about-heading" class="section-heading">About The Ark</h2>
+            <p id="about-body">
+              Founded with a passion for creating clean, comfortable environments, The Ark has been
+              serving homes and businesses across Kiambu County. Our team is trained, vetted, and
+              committed to delivering outstanding results with every visit.
+            </p>
+            <ul id="about-highlights" class="about-highlights" aria-label="Our highlights">
+              <li>Fully insured and vetted team</li>
+              <li>Eco-friendly, pet-safe products</li>
+              <li>Satisfaction guaranteed</li>
+              <li>Flexible scheduling 7 days a week</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" style="margin-top:1.75rem; display:inline-block;">
+              Book a Clean
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GALLERY
+    ============================================================ -->
+    <section id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">Our Work</span>
+          <h2 id="gallery-heading" class="section-heading">Results That Speak for Themselves</h2>
+          <p class="section-sub">
+            Browse through before-and-after shots and completed jobs across different service types.
+          </p>
+        </div>
+
+        <!-- Filter buttons -->
+        <div class="gallery-filter" role="group" aria-label="Filter gallery by category">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="residential">Residential</button>
+          <button class="filter-btn" data-filter="office">Office</button>
+          <button class="filter-btn" data-filter="deep">Deep Clean</button>
+          <button class="filter-btn" data-filter="carpet">Carpet</button>
+          <button class="filter-btn" data-filter="windows">Windows</button>
+        </div>
+
+        <!-- Rendered dynamically from content.json -->
+        <div id="gallery-grid" class="gallery-grid" aria-label="Photo gallery"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRICING
+    ============================================================ -->
+    <section id="pricing" aria-labelledby="pricing-heading">
+      <div class="container text-center">
+        <span class="section-label">Transparent Pricing</span>
+        <h2 id="pricing-heading" class="section-heading">Simple, Honest Packages</h2>
+        <p class="section-sub">
+          All prices are for standard properties. Contact us for a custom quote on larger jobs.
+        </p>
+        <!-- Rendered dynamically from content.json -->
+        <div id="pricing-grid" class="pricing-grid" aria-label="Pricing packages"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS
+    ============================================================ -->
+    <section id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">Happy Customers</span>
+          <h2 id="testimonials-heading" class="section-heading">What Our Clients Say</h2>
+          <p class="section-sub">
+            Don't just take our word for it — here's what our clients across Kiambu County have to say.
+          </p>
+        </div>
+        <!-- Rendered dynamically from content.json -->
+        <div id="testimonials-grid" class="testimonials-grid" aria-label="Customer reviews"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label">Get In Touch</span>
+          <h2 id="contact-heading" class="section-heading">Book a Clean or Get a Quote</h2>
+          <p class="section-sub">
+            Fill in the form below and we'll get back to you within a few hours. Prefer to call? We're available 7 days a week.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <aside class="contact-info">
+            <h3>Contact Details</h3>
+
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">📞</span>
+              <div>
+                <strong>Phone / WhatsApp</strong>
+                <a id="contact-phone-link" href="tel:+254700000000">
+                  <span id="contact-phone">+254 700 000 000</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <a id="contact-email-link" href="mailto:hello@thearkcleans.com">
+                  <span id="contact-email">hello@thearkcleans.com</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Location</strong>
+                <span id="contact-address">Karuri, Kiambu County, Kenya</span>
+              </div>
+            </div>
+
+            <div class="social-links" aria-label="Social media links">
+              <a id="social-facebook" href="#" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">📘</a>
+              <a id="social-instagram" href="#" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">📸</a>
+              <a id="contact-whatsapp" href="#" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+            </div>
+          </aside>
+
+          <!-- Contact Form (Formspree) -->
+          <div class="contact-form-wrap">
+            <!--
+              ACTION: Replace YOUR_FORM_ID with your Formspree form ID.
+              See README.md for setup instructions.
+              The action is also set dynamically from content.json.
+            -->
+            <form id="contact-form"
+                  action="https://formspree.io/f/YOUR_FORM_ID"
+                  method="POST"
+                  class="contact-form"
+                  novalidate>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Your Name *</label>
+                  <input type="text" id="contact-name" name="name" required placeholder="Jane Doe" autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label for="contact-phone-input">Phone Number *</label>
+                  <input type="tel" id="contact-phone-input" name="phone" required placeholder="+254 700 000 000" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email-input">Email Address</label>
+                <input type="email" id="contact-email-input" name="email" placeholder="jane@example.com" autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-service">Service Required</label>
+                <select id="contact-service" name="service">
+                  <option value="">— Select a service —</option>
+                  <option value="residential">Residential Cleaning</option>
+                  <option value="office">Office / Commercial</option>
+                  <option value="deep">Deep Clean</option>
+                  <option value="carpet">Carpet & Upholstery</option>
+                  <option value="windows">Window Cleaning</option>
+                  <option value="afterparty">After-Event Cleaning</option>
+                  <option value="other">Other / Not Sure</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message *</label>
+                <textarea id="contact-message" name="message" required
+                  placeholder="Tell us about your property, preferred dates, and anything else we should know…"></textarea>
+              </div>
+
+              <!-- Honeypot field to prevent spam -->
+              <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true">
+
+              <div id="form-status" class="form-status" role="alert" aria-live="polite"></div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer id="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo footer-logo">The Ark</a>
+          <p id="footer-desc">Professional cleaning services for homes and businesses across Kiambu County.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Residential</a></li>
+            <li><a href="#services">Office & Commercial</a></li>
+            <li><a href="#services">Deep Cleaning</a></li>
+            <li><a href="#services">Carpet & Upholstery</a></li>
+            <li><a href="#services">Window Cleaning</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span id="footer-copy">© 2024 The Ark Cleaning Co. All rights reserved.</span>
+        <span>Made with ♥ in Kiambu County</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       LIGHTBOX (Gallery modal)
+  ============================================================ -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close image viewer">×</button>
+    <img id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption" class="lightbox-caption"></div>
+  </div>
+
+  <!-- Scroll-to-top button -->
+  <button id="scrollTop" aria-label="Scroll to top" title="Back to top">↑</button>
+
+  <!-- Main Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>

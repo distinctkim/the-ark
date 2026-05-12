@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — The Ark</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ---- Admin Panel Styles ---- */
+    :root {
+      --navy:   #1a2e4a;
+      --teal:   #2abaad;
+      --white:  #ffffff;
+      --light:  #f4f7fc;
+      --border: #dde3ee;
+      --muted:  #718096;
+      --danger: #e53e3e;
+      --success:#276749;
+      --warn:   #744210;
+      --warn-bg:#fefcbf;
+      --r: 8px;
+      --font: 'DM Sans', system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); background: var(--light); color: #2d3748; line-height: 1.6; }
+    a { color: var(--teal); }
+    h1,h2,h3 { color: var(--navy); }
+
+    /* Top Bar */
+    .admin-header {
+      background: var(--navy);
+      color: #fff;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .admin-header-title { font-size: 1.1rem; font-weight: 700; }
+    .admin-header-sub { font-size: 0.8rem; opacity: 0.65; }
+    .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+
+    /* Layout */
+    .admin-wrap { max-width: 860px; margin: 2rem auto; padding: 0 1.5rem 4rem; }
+
+    /* Cards */
+    .card {
+      background: var(--white);
+      border-radius: var(--r);
+      border: 1px solid var(--border);
+      padding: 1.75rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .card h2 { font-size: 1.1rem; margin-bottom: 1.25rem; }
+
+    /* Forms */
+    .form-group { margin-bottom: 1rem; }
+    .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--navy); }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 1.5px solid var(--border);
+      border-radius: var(--r);
+      font-family: var(--font);
+      font-size: 0.9rem;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(42,186,173,0.15);
+    }
+    .form-group textarea { min-height: 100px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.65rem 1.5rem;
+      border-radius: var(--r);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s;
+    }
+    .btn-primary { background: var(--teal); color: #fff; }
+    .btn-primary:hover { background: #1e9589; }
+    .btn-danger  { background: var(--danger); color: #fff; font-size: 0.8rem; padding: 0.4rem 0.9rem; }
+    .btn-danger:hover { background: #c53030; }
+    .btn-ghost   { background: transparent; color: rgba(255,255,255,0.8); border: 1.5px solid rgba(255,255,255,0.4); font-size: 0.85rem; padding: 0.4rem 1rem; }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+    /* Warning boxes */
+    .alert {
+      border-radius: var(--r);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.9rem;
+    }
+    .alert-warn { background: var(--warn-bg); color: var(--warn); border-left: 4px solid #d69e2e; }
+    .alert-info { background: #ebf8ff; color: #2b6cb0; border-left: 4px solid #3182ce; }
+
+    /* Status messages */
+    .status-msg { padding: 0.7rem 1rem; border-radius: var(--r); font-size: 0.9rem; margin-top: 0.75rem; }
+    .status-success { background: #e6f9f7; color: var(--success); }
+    .status-error   { background: #fff5f5; color: var(--danger); }
+    .status-info    { background: #ebf8ff; color: #2b6cb0; }
+
+    /* Token gate */
+    #token-section { max-width: 540px; margin: 3rem auto; }
+    .token-icon { font-size: 2.5rem; text-align: center; margin-bottom: 0.75rem; }
+    .token-hint { font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem; }
+
+    /* Tabs */
+    .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+    .tab-btn {
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--r);
+      border: 1.5px solid var(--border);
+      background: var(--white);
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+    .tab-btn.active { background: var(--navy); color: #fff; border-color: var(--navy); }
+
+    /* Drop zone */
+    #drop-zone {
+      border: 2px dashed var(--border);
+      border-radius: var(--r);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+    #drop-zone:hover, #drop-zone.drag-over {
+      border-color: var(--teal);
+      background: #f0fdfb;
+      color: var(--teal);
+    }
+    #drop-zone .drop-icon { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+
+    /* Gallery admin list */
+    #gallery-list { margin-top: 1rem; }
+    .gallery-admin-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .gallery-admin-item img {
+      width: 64px; height: 48px;
+      object-fit: cover;
+      border-radius: 4px;
+      background: var(--light);
+    }
+    .gallery-item-info { flex: 1; }
+    .gallery-item-info strong { display: block; font-size: 0.9rem; }
+    .badge {
+      display: inline-block;
+      background: var(--light);
+      color: var(--muted);
+      font-size: 0.72rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 20px;
+      margin-top: 0.2rem;
+    }
+    .btn-delete {
+      background: none;
+      border: 1.5px solid var(--border);
+      border-radius: 50%;
+      width: 30px; height: 30px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: var(--danger);
+      flex-shrink: 0;
+      transition: all 0.2s;
+    }
+    .btn-delete:hover { background: var(--danger); color: #fff; border-color: var(--danger); }
+
+    .hidden { display: none; }
+    .muted-text { color: var(--muted); font-size: 0.9rem; }
+    section-divider { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+
+    @media (max-width: 600px) {
+      .form-row { grid-template-columns: 1fr; }
+      .admin-wrap { padding: 0 1rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     ADMIN HEADER
+============================================================ -->
+<header class="admin-header" role="banner">
+  <div>
+    <div class="admin-header-title">🏠 The Ark — Admin Panel</div>
+    <div class="admin-header-sub">Update content and manage gallery</div>
+  </div>
+  <div class="header-actions" id="header-actions">
+    <a href="index.html" class="btn btn-ghost" target="_blank">View Site ↗</a>
+    <button id="logout-btn" class="btn btn-ghost hidden">Log Out</button>
+  </div>
+</header>
+
+<div class="admin-wrap">
+
+  <!-- ============================================================
+       SECURITY WARNING — Always shown at top
+  ============================================================ -->
+  <div class="alert alert-warn" role="alert">
+    <strong>⚠️ Security notice:</strong>
+    This admin panel uses your GitHub Personal Access Token (PAT) to edit site content.
+    Only use it on your <strong>own trusted device</strong>. Never share your token with anyone.
+    The token is <strong>not stored</strong> — it is held in memory only while the page is open.
+    Close this tab when done. If your token is ever exposed, revoke it immediately at
+    <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">github.com/settings/tokens</a>.
+  </div>
+
+  <!-- ============================================================
+       TOKEN GATE — Shown before login
+  ============================================================ -->
+  <div id="token-section" class="card">
+    <div class="token-icon">🔑</div>
+    <h2 style="text-align:center; margin-bottom:0.5rem;">Enter Your GitHub Token</h2>
+    <p style="text-align:center; color:var(--muted); font-size:0.9rem; margin-bottom:1.5rem;">
+      You need a GitHub Personal Access Token with <strong>repo</strong> scope to save changes.
+      <br><a href="#token-help" onclick="document.getElementById('token-help').classList.toggle('hidden')">How do I get one?</a>
+    </p>
+
+    <div id="token-help" class="alert alert-info hidden">
+      <strong>How to create a GitHub Personal Access Token:</strong>
+      <ol style="margin: 0.75rem 0 0 1.25rem; font-size:0.88rem; line-height:1.8;">
+        <li>Go to <a href="https://github.com/settings/tokens/new" target="_blank" rel="noopener">github.com/settings/tokens/new</a></li>
+        <li>Give it a name, e.g. <em>the-ark-admin</em></li>
+        <li>Set an expiration (e.g. 90 days)</li>
+        <li>Under <strong>Scopes</strong>, tick <strong>repo</strong> (full control of private repositories)</li>
+        <li>Click <strong>Generate token</strong> and copy it</li>
+        <li>Paste it in the box below — you will not see it again</li>
+      </ol>
+      <p style="margin-top:0.75rem; font-size:0.85rem;">
+        ⚠️ Store your token securely (e.g. in a password manager). If you lose it, generate a new one.
+      </p>
+    </div>
+
+    <form id="token-form">
+      <div class="form-group">
+        <label for="pat-input">Personal Access Token</label>
+        <input type="password" id="pat-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
+               autocomplete="off" spellcheck="false" required>
+        <div class="token-hint">Your token is cleared from this page when you close the tab or log out.</div>
+      </div>
+      <div id="token-status" class="status-msg" style="display:none"></div>
+      <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">Connect to GitHub</button>
+    </form>
+  </div>
+
+  <!-- ============================================================
+       ADMIN PANEL — Shown after successful auth
+  ============================================================ -->
+  <div id="admin-panel" class="hidden">
+
+    <!-- Tabs -->
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="content" role="tab" aria-selected="true">✏️ Edit Content</button>
+      <button class="tab-btn" data-tab="gallery" role="tab" aria-selected="false">🖼️ Manage Gallery</button>
+    </div>
+
+    <!-- ---- TAB: Content Editor ---- -->
+    <div id="tab-content" class="tab-panel">
+
+      <form id="content-form">
+
+        <!-- Site Info -->
+        <div class="card">
+          <h2>Site & Contact Info</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="edit-title">Site Title</label>
+              <input type="text" id="edit-title" placeholder="The Ark Cleaning Co.">
+            </div>
+            <div class="form-group">
+              <label for="edit-phone">Phone / WhatsApp Number</label>
+              <input type="tel" id="edit-phone" placeholder="+254 700 000 000">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="edit-email">Email Address</label>
+              <input type="email" id="edit-email" placeholder="hello@thearkcleans.com">
+            </div>
+            <div class="form-group">
+              <label for="edit-address">Physical Address</label>
+              <input type="text" id="edit-address" placeholder="Karuri, Kiambu County, Kenya">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="edit-formspree">Formspree Form URL</label>
+            <input type="url" id="edit-formspree" placeholder="https://formspree.io/f/YOUR_FORM_ID">
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="card">
+          <h2>Social Media Links</h2>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="edit-facebook">Facebook URL</label>
+              <input type="url" id="edit-facebook" placeholder="https://facebook.com/yourpage">
+            </div>
+            <div class="form-group">
+              <label for="edit-instagram">Instagram URL</label>
+              <input type="url" id="edit-instagram" placeholder="https://instagram.com/yourhandle">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="edit-whatsapp">WhatsApp Link</label>
+            <input type="url" id="edit-whatsapp" placeholder="https://wa.me/254700000000">
+          </div>
+        </div>
+
+        <!-- Hero -->
+        <div class="card">
+          <h2>Hero Section</h2>
+          <div class="form-group">
+            <label for="edit-hero-heading">Main Heading</label>
+            <input type="text" id="edit-hero-heading" placeholder="A Clean Space Is a Happy Space">
+          </div>
+          <div class="form-group">
+            <label for="edit-hero-sub">Subheading / Tagline</label>
+            <input type="text" id="edit-hero-sub" placeholder="The Ark delivers spotless results every time…">
+          </div>
+          <div class="form-group">
+            <label for="edit-hero-cta">Call-to-Action Button Text</label>
+            <input type="text" id="edit-hero-cta" placeholder="Get a Free Quote">
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="card">
+          <h2>About Section</h2>
+          <div class="form-group">
+            <label for="edit-about-heading">About Heading</label>
+            <input type="text" id="edit-about-heading" placeholder="About The Ark">
+          </div>
+          <div class="form-group">
+            <label for="edit-about-body">About Body Text</label>
+            <textarea id="edit-about-body" placeholder="Tell your story here…"></textarea>
+          </div>
+          <p class="muted-text" style="font-size:0.8rem;">
+            To edit the bullet highlights, pricing, testimonials, or services,
+            edit <code>data/content.json</code> directly in GitHub.
+          </p>
+        </div>
+
+        <div id="content-status" class="status-msg" style="display:none"></div>
+        <button type="submit" class="btn btn-primary">💾 Save & Publish Changes</button>
+      </form>
+
+    </div><!-- /tab-content -->
+
+    <!-- ---- TAB: Gallery Manager ---- -->
+    <div id="tab-gallery" class="tab-panel hidden">
+
+      <div class="card">
+        <h2>Upload New Photos</h2>
+
+        <div class="alert alert-info">
+          Photos are resized to max 1200px wide (JPEG, quality 85%) before upload to save storage space.
+          Supported formats: JPG, PNG, WebP, GIF.
+        </div>
+
+        <div class="form-row" style="margin-bottom:1rem;">
+          <div class="form-group">
+            <label for="img-alt">Image Caption / Description *</label>
+            <input type="text" id="img-alt" placeholder="Sparkling clean kitchen after deep clean">
+          </div>
+          <div class="form-group">
+            <label for="img-category">Category</label>
+            <select id="img-category">
+              <option value="residential">Residential</option>
+              <option value="office">Office</option>
+              <option value="deep">Deep Clean</option>
+              <option value="carpet">Carpet</option>
+              <option value="windows">Windows</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="drop-zone" tabindex="0" role="button" aria-label="Upload images — drag and drop or click to browse">
+          <span class="drop-icon">📷</span>
+          <strong>Drag & drop images here</strong>
+          <br>
+          <span style="font-size:0.85rem;">or click to browse files (select multiple)</span>
+        </div>
+        <input type="file" id="image-input" accept="image/*" multiple style="display:none">
+
+        <div id="gallery-status" class="status-msg" style="display:none; margin-top:0.75rem;"></div>
+      </div>
+
+      <div class="card">
+        <h2>Current Gallery Images</h2>
+        <p class="muted-text" style="font-size:0.85rem; margin-bottom:0.75rem;">
+          Remove entries from the gallery (files are not deleted from the repo).
+        </p>
+        <div id="gallery-list">
+          <p class="muted-text">Loading gallery…</p>
+        </div>
+      </div>
+
+    </div><!-- /tab-gallery -->
+
+  </div><!-- /admin-panel -->
+
+</div><!-- /admin-wrap -->
+
+<script src="js/admin.js"></script>
+
+<!-- Show logout button after login -->
+<script>
+  // Make logout button visible once admin panel is shown
+  const observer = new MutationObserver(() => {
+    const panel = document.getElementById('admin-panel');
+    const btn   = document.getElementById('logout-btn');
+    if (panel && btn) btn.classList.toggle('hidden', panel.classList.contains('hidden'));
+  });
+  observer.observe(document.getElementById('admin-panel'), { attributes: true, attributeFilter: ['class'] });
+
+  // Show status messages
+  const origShow = window.showStatus;
+  function showStatus(id, msg, type) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = msg;
+    el.className = `status-msg status-${type}`;
+    el.style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
