@@ -144,12 +144,6 @@
       "category": "residential"
     },
     {
-      "id": "g3",
-      "src": "assets/images/gallery-03.svg",
-      "alt": "Gleaming office reception area",
-      "category": "office"
-    },
-    {
       "id": "g4",
       "src": "assets/images/gallery-04.svg",
       "alt": "Freshly cleaned bathroom tiles",
