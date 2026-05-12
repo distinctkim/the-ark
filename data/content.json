@@ -6,7 +6,7 @@
     "phone": "+254 700 000 000",
     "email": "hello@thearkcleans.com",
     "address": "Karuri, Kiambu County, Kenya",
-    "formspreeEndpoint": "https://formspree.io/f/YOUR_FORM_ID",
+    "formspreeEndpoint": "https://formspree.io/f/mwvyyzkg",
     "social": {
       "facebook": "https://facebook.com/thearkcleans",
       "instagram": "https://instagram.com/thearkcleans",
@@ -15,7 +15,7 @@
   },
   "hero": {
     "heading": "A Clean Space Is a Happy Space",
-    "subheading": "The Ark delivers spotless results every time — for your home, office, or business.",
+    "subheading": "The Ark delivers spotless results every time â for your home, office, or business.",
     "ctaText": "Get a Free Quote",
     "ctaLink": "#contact",
     "backgroundImage": "assets/images/hero-bg.svg"
@@ -34,37 +34,37 @@
   "services": [
     {
       "id": "residential",
-      "icon": "🏠",
+      "icon": "ð ",
       "title": "Residential Cleaning",
       "description": "Regular or one-off deep cleans for houses, apartments, and rental properties. We handle every room from top to bottom."
     },
     {
       "id": "office",
-      "icon": "🏢",
+      "icon": "ð¢",
       "title": "Office & Commercial",
       "description": "Keep your workspace professional and hygienic. Daily, weekly, or monthly contracts available for businesses of all sizes."
     },
     {
       "id": "deep",
-      "icon": "✨",
+      "icon": "â¨",
       "title": "Deep Cleaning",
       "description": "A thorough top-to-bottom clean perfect for move-ins, move-outs, post-renovation, or seasonal refresh."
     },
     {
       "id": "carpet",
-      "icon": "🧹",
+      "icon": "ð§¹",
       "title": "Carpet & Upholstery",
       "description": "Specialised steam cleaning and stain removal for carpets, sofas, chairs, and mattresses."
     },
     {
       "id": "windows",
-      "icon": "🪟",
+      "icon": "ðª",
       "title": "Window Cleaning",
-      "description": "Crystal-clear windows inside and out — for residential and commercial properties, including high-access windows."
+      "description": "Crystal-clear windows inside and out â for residential and commercial properties, including high-access windows."
     },
     {
       "id": "afterparty",
-      "icon": "🎉",
+      "icon": "ð",
       "title": "After-Event Cleaning",
       "description": "We tidy up after parties, weddings, corporate events, and any other gathering, so you don't have to."
     }
@@ -120,7 +120,7 @@
     {
       "name": "David K.",
       "location": "Ruaka",
-      "quote": "We use The Ark for our office every week. Absolutely reliable — the team is professional and always does a fantastic job.",
+      "quote": "We use The Ark for our office every week. Absolutely reliable â the team is professional and always does a fantastic job.",
       "rating": 5
     },
     {
@@ -132,7 +132,7 @@
     {
       "name": "James O.",
       "location": "Banana",
-      "quote": "After-event cleanup for our corporate dinner — done in under 2 hours and the venue looked brand new. Highly recommended!",
+      "quote": "After-event cleanup for our corporate dinner â done in under 2 hours and the venue looked brand new. Highly recommended!",
       "rating": 5
     }
   ],
@@ -164,7 +164,7 @@
     {
       "id": "g5",
       "src": "assets/images/gallery-05.svg",
-      "alt": "Steam-cleaned carpet — before and after",
+      "alt": "Steam-cleaned carpet â before and after",
       "category": "carpet"
     },
     {
