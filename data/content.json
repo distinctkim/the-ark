@@ -3,26 +3,26 @@
     "title": "The Ark Cleaning Co.",
     "tagline": "We Care For Your Space",
     "description": "Professional cleaning services for homes and businesses in the local area. Reliable, affordable, and thorough.",
-    "phone": "+254 700 000 000",
+    "phone": "+254 722713104",
     "email": "hello@thearkcleans.com",
-    "address": "Karuri, Kiambu County, Kenya",
-    "formspreeEndpoint": "https://formspree.io/f/YOUR_FORM_ID",
+    "address": "CBD, Nairobi County, Kenya",
+    "formspreeEndpoint": "https://formspree.io/f/mwvyyzkg",
     "social": {
       "facebook": "https://facebook.com/thearkcleans",
       "instagram": "https://instagram.com/thearkcleans",
-      "whatsapp": "https://wa.me/254700000000"
+      "whatsapp": "https://wa.me/254722713104"
     }
   },
   "hero": {
     "heading": "A Clean Space Is a Happy Space",
-    "subheading": "The Ark delivers spotless results every time — for your home, office, or business.",
+    "subheading": "The Ark delivers spotless results every time all for your home, office, or business.",
     "ctaText": "Get a Free Quote",
     "ctaLink": "#contact",
     "backgroundImage": "assets/images/hero-bg.svg"
   },
   "about": {
     "heading": "About The Ark",
-    "body": "Founded with a passion for creating clean, comfortable environments, The Ark has been serving homes and businesses across Kiambu County. Our team is trained, vetted, and committed to delivering outstanding results with every visit. We use eco-friendly products that are safe for your family and pets.",
+    "body": "Founded with a passion for creating clean, comfortable environments, The Ark has been serving homes and businesses across the country. Our team is trained, vetted, and committed to delivering outstanding results with every visit. We use eco-friendly products that are safe for your family and pets.",
     "highlights": [
       "Fully insured and vetted team",
       "Eco-friendly, pet-safe products",
@@ -34,37 +34,37 @@
   "services": [
     {
       "id": "residential",
-      "icon": "🏠",
+      "icon": "ÃÂ°ÃÂÃÂÃÂ ",
       "title": "Residential Cleaning",
       "description": "Regular or one-off deep cleans for houses, apartments, and rental properties. We handle every room from top to bottom."
     },
     {
       "id": "office",
-      "icon": "🏢",
+      "icon": "ÃÂ°ÃÂÃÂÃÂ¢",
       "title": "Office & Commercial",
       "description": "Keep your workspace professional and hygienic. Daily, weekly, or monthly contracts available for businesses of all sizes."
     },
     {
       "id": "deep",
-      "icon": "✨",
+      "icon": "ÃÂ¢ÃÂÃÂ¨",
       "title": "Deep Cleaning",
       "description": "A thorough top-to-bottom clean perfect for move-ins, move-outs, post-renovation, or seasonal refresh."
     },
     {
       "id": "carpet",
-      "icon": "🧹",
+      "icon": "ÃÂ°ÃÂÃÂ§ÃÂ¹",
       "title": "Carpet & Upholstery",
       "description": "Specialised steam cleaning and stain removal for carpets, sofas, chairs, and mattresses."
     },
     {
       "id": "windows",
-      "icon": "🪟",
+      "icon": "ÃÂ°ÃÂÃÂªÃÂ",
       "title": "Window Cleaning",
-      "description": "Crystal-clear windows inside and out — for residential and commercial properties, including high-access windows."
+      "description": "Crystal-clear windows inside and out ÃÂ¢ÃÂÃÂ for residential and commercial properties, including high-access windows."
     },
     {
       "id": "afterparty",
-      "icon": "🎉",
+      "icon": "ÃÂ°ÃÂÃÂÃÂ",
       "title": "After-Event Cleaning",
       "description": "We tidy up after parties, weddings, corporate events, and any other gathering, so you don't have to."
     }
@@ -120,7 +120,7 @@
     {
       "name": "David K.",
       "location": "Ruaka",
-      "quote": "We use The Ark for our office every week. Absolutely reliable — the team is professional and always does a fantastic job.",
+      "quote": "We use The Ark for our office every week. Absolutely reliable ÃÂ¢ÃÂÃÂ the team is professional and always does a fantastic job.",
       "rating": 5
     },
     {
@@ -132,29 +132,11 @@
     {
       "name": "James O.",
       "location": "Banana",
-      "quote": "After-event cleanup for our corporate dinner — done in under 2 hours and the venue looked brand new. Highly recommended!",
+      "quote": "After-event cleanup for our corporate dinner ÃÂ¢ÃÂÃÂ done in under 2 hours and the venue looked brand new. Highly recommended!",
       "rating": 5
     }
   ],
   "gallery": [
-    {
-      "id": "g1",
-      "src": "assets/images/gallery-01.svg",
-      "alt": "Spotless kitchen after a deep clean",
-      "category": "residential"
-    },
-    {
-      "id": "g2",
-      "src": "assets/images/gallery-02.svg",
-      "alt": "Clean and bright living room",
-      "category": "residential"
-    },
-    {
-      "id": "g3",
-      "src": "assets/images/gallery-03.svg",
-      "alt": "Gleaming office reception area",
-      "category": "office"
-    },
     {
       "id": "g4",
       "src": "assets/images/gallery-04.svg",
@@ -164,7 +146,7 @@
     {
       "id": "g5",
       "src": "assets/images/gallery-05.svg",
-      "alt": "Steam-cleaned carpet — before and after",
+      "alt": "Steam-cleaned carpet ÃÂ¢ÃÂÃÂ before and after",
       "category": "carpet"
     },
     {
@@ -172,6 +154,24 @@
       "src": "assets/images/gallery-06.svg",
       "alt": "Crystal-clear windows after cleaning",
       "category": "windows"
+    },
+    {
+      "id": "g1778601027747",
+      "src": "assets/images/gallery-1778601025042-livingroom.avif",
+      "alt": "livingroom",
+      "category": "residential"
+    },
+    {
+      "id": "g1778602455795",
+      "src": "assets/images/gallery-1778602453545-office_cleaning.webp",
+      "alt": "OfficeCleaning",
+      "category": "office"
+    },
+    {
+      "id": "g1778605163050",
+      "src": "assets/images/gallery-1778605160924-cabro-cleaning-other.jpg",
+      "alt": "cabro-cleaning-other",
+      "category": "other"
     }
   ]
 }
