@@ -172,6 +172,12 @@
       "src": "assets/images/gallery-06.svg",
       "alt": "Crystal-clear windows after cleaning",
       "category": "windows"
+    },
+    {
+      "id": "g1778601027747",
+      "src": "assets/images/gallery-1778601025042-livingroom.avif",
+      "alt": "livingroom",
+      "category": "residential"
     }
   ]
 }
