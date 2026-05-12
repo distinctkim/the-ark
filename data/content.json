@@ -138,12 +138,6 @@
   ],
   "gallery": [
     {
-      "id": "g1",
-      "src": "assets/images/gallery-01.svg",
-      "alt": "Spotless kitchen after a deep clean",
-      "category": "residential"
-    },
-    {
       "id": "g4",
       "src": "assets/images/gallery-04.svg",
       "alt": "Freshly cleaned bathroom tiles",
@@ -172,6 +166,12 @@
       "src": "assets/images/gallery-1778602453545-office_cleaning.webp",
       "alt": "OfficeCleaning",
       "category": "office"
+    },
+    {
+      "id": "g1778605163050",
+      "src": "assets/images/gallery-1778605160924-cabro-cleaning-other.jpg",
+      "alt": "cabro-cleaning-other",
+      "category": "other"
     }
   ]
 }
