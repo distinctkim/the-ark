@@ -34,37 +34,37 @@
   "services": [
     {
       "id": "residential",
-      "icon": "Ã°ÂÂÂ ",
+      "icon": "ÃÂ°ÃÂÃÂÃÂ ",
       "title": "Residential Cleaning",
       "description": "Regular or one-off deep cleans for houses, apartments, and rental properties. We handle every room from top to bottom."
     },
     {
       "id": "office",
-      "icon": "Ã°ÂÂÂ¢",
+      "icon": "ÃÂ°ÃÂÃÂÃÂ¢",
       "title": "Office & Commercial",
       "description": "Keep your workspace professional and hygienic. Daily, weekly, or monthly contracts available for businesses of all sizes."
     },
     {
       "id": "deep",
-      "icon": "Ã¢ÂÂ¨",
+      "icon": "ÃÂ¢ÃÂÃÂ¨",
       "title": "Deep Cleaning",
       "description": "A thorough top-to-bottom clean perfect for move-ins, move-outs, post-renovation, or seasonal refresh."
     },
     {
       "id": "carpet",
-      "icon": "Ã°ÂÂ§Â¹",
+      "icon": "ÃÂ°ÃÂÃÂ§ÃÂ¹",
       "title": "Carpet & Upholstery",
       "description": "Specialised steam cleaning and stain removal for carpets, sofas, chairs, and mattresses."
     },
     {
       "id": "windows",
-      "icon": "Ã°ÂÂªÂ",
+      "icon": "ÃÂ°ÃÂÃÂªÃÂ",
       "title": "Window Cleaning",
-      "description": "Crystal-clear windows inside and out Ã¢ÂÂ for residential and commercial properties, including high-access windows."
+      "description": "Crystal-clear windows inside and out ÃÂ¢ÃÂÃÂ for residential and commercial properties, including high-access windows."
     },
     {
       "id": "afterparty",
-      "icon": "Ã°ÂÂÂ",
+      "icon": "ÃÂ°ÃÂÃÂÃÂ",
       "title": "After-Event Cleaning",
       "description": "We tidy up after parties, weddings, corporate events, and any other gathering, so you don't have to."
     }
@@ -120,7 +120,7 @@
     {
       "name": "David K.",
       "location": "Ruaka",
-      "quote": "We use The Ark for our office every week. Absolutely reliable Ã¢ÂÂ the team is professional and always does a fantastic job.",
+      "quote": "We use The Ark for our office every week. Absolutely reliable ÃÂ¢ÃÂÃÂ the team is professional and always does a fantastic job.",
       "rating": 5
     },
     {
@@ -132,7 +132,7 @@
     {
       "name": "James O.",
       "location": "Banana",
-      "quote": "After-event cleanup for our corporate dinner Ã¢ÂÂ done in under 2 hours and the venue looked brand new. Highly recommended!",
+      "quote": "After-event cleanup for our corporate dinner ÃÂ¢ÃÂÃÂ done in under 2 hours and the venue looked brand new. Highly recommended!",
       "rating": 5
     }
   ],
@@ -158,7 +158,7 @@
     {
       "id": "g5",
       "src": "assets/images/gallery-05.svg",
-      "alt": "Steam-cleaned carpet Ã¢ÂÂ before and after",
+      "alt": "Steam-cleaned carpet ÃÂ¢ÃÂÃÂ before and after",
       "category": "carpet"
     },
     {
