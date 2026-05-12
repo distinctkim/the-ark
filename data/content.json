@@ -178,6 +178,12 @@
       "src": "assets/images/gallery-1778601025042-livingroom.avif",
       "alt": "livingroom",
       "category": "residential"
+    },
+    {
+      "id": "g1778602455795",
+      "src": "assets/images/gallery-1778602453545-office_cleaning.webp",
+      "alt": "OfficeCleaning",
+      "category": "office"
     }
   ]
 }
