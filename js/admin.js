@@ -15,7 +15,7 @@
 /* ============================================================
    CONFIG — Update these two values for your GitHub repo
    ============================================================ */
-const GITHUB_OWNER = 'YOUR_GITHUB_USERNAME'; // e.g. 'janedoe'
+const GITHUB_OWNER = 'distinctkim'; // e.g. 'janedoe'
 const GITHUB_REPO  = 'the-ark';              // your repo name
 const CONTENT_PATH = 'data/content.json';    // path in repo
 
